@@ -20,5 +20,5 @@
   <%= @wiki.user.email %>
 </p>
 
-<%= link_to 'Edit', edit_wiki_path(@wiki) %> |
+<%= link_to('Edit', edit_wiki_path(@wiki)) if authorize(@wiki) %> |
 <%= link_to 'Back', wikis_path %>

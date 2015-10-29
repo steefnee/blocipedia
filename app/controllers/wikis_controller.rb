@@ -17,11 +17,13 @@ class WikisController < ApplicationController
 
   # GET /wikis/1/edit
   def edit
+    authorize @wiki
   end
 
   # POST /wikis
   def create
     @wiki = current_user.wikis.new(wiki_params)
+    authorize @wiki
 
     if @wiki.save
       redirect_to @wiki, notice: 'Wiki was successfully created.'
@@ -32,6 +34,7 @@ class WikisController < ApplicationController
 
   # PATCH/PUT /wikis/1
   def update
+    authorize @wiki
     if @wiki.update(wiki_params)
       redirect_to @wiki, notice: 'Wiki was successfully updated.'
     else

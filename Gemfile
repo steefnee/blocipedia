@@ -28,6 +28,8 @@ gem 'bootstrap-sass'
 
 gem 'devise'
 
+gem 'pundit'
+
 gem 'figaro'
 
 group :development, :test do
