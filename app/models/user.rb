@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
-  attr_accessible :role
+
   has_many :wikis
 
   after_initialize :init
@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   enum role: [:standard, :premium, :admin]
 
   def init
-    role = :standard
+    self.role = :standard
   end
 
 
