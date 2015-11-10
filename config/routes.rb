@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
+  resources :charges, only: [:new, :create]
+  get 'charges/downgrade'
 
 end

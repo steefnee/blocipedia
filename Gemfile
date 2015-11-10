@@ -32,6 +32,10 @@ gem 'pundit'
 
 gem 'figaro'
 
+gem 'faker'
+
+gem 'stripe'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers'

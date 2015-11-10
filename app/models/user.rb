@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   enum role: [:standard, :premium, :admin]
 
   def init
-    self.role = :standard
+    role ||= :standard
   end
 
 
