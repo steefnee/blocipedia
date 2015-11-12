@@ -36,6 +36,8 @@ gem 'faker'
 
 gem 'stripe'
 
+gem 'redcarpet'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers'
