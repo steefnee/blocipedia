@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
+<% if current_user.premium? && @wiki.private? || current_user.admin?  %>
+  <%= link_to 'Add Collaborator', wiki_collaborators_path(@wiki) %> |
+<% end %>
+
 <%= link_to 'Show', @wiki %> |
 <%= link_to 'Back', wikis_path %>

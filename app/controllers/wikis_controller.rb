@@ -3,7 +3,7 @@ class WikisController < ApplicationController
 
   # GET /wikis
   def index
-    @wikis = Wiki.visible_to(current_user)
+    @wikis = policy_scope(Wiki)
   end
 
   # GET /wikis/1
