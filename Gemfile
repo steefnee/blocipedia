@@ -38,6 +38,8 @@ gem 'stripe'
 
 gem 'redcarpet'
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda-matchers'
